@@ -2,6 +2,10 @@
 micronaut:
   application:
     name: blog
+flyway:
+  datasources:
+    default:
+      enabled: true
 datasources:
   default:
     dialect: MYSQL

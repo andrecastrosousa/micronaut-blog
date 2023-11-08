@@ -1,4 +1,4 @@
-package com.andrecastrosousa.service
+package com.andrecastrosousa.controller.service
 
 import com.andrecastrosousa.model.Article
 
