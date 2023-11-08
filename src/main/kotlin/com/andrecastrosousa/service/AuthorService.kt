@@ -2,6 +2,6 @@ package com.andrecastrosousa.service
 
 import com.andrecastrosousa.model.Author
 
-interface AuthService {
+interface AuthorService {
     fun listAll() : List<Author>
 }
