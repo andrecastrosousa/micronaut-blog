@@ -36,6 +36,10 @@ class AuthorServiceImpl (private val authorRepository: AuthorRepository) : Autho
     }
 
     override fun deleteById(id: Long) {
+        val optionalAuthor = authorRepository.findById(id)
+        if (optionalAuthor.isEmpty) {
+            throw NoAuthorFoundException("Author not found")
+        }
         authorRepository.deleteById(id);
     }
 }
