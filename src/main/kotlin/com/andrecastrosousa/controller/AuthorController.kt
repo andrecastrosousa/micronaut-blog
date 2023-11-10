@@ -10,8 +10,6 @@ import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import io.micronaut.http.annotation.Produces
 import io.micronaut.http.annotation.Put
-import jakarta.validation.Valid
-import jakarta.validation.constraints.NotBlank
 
 @Controller("/api/authors")
 class AuthorController(private val authorService: AuthorService) {
