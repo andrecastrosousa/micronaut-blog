@@ -6,8 +6,8 @@ flyway:
   datasources:
     default:
       enabled: true
-      baseline-on-migrate: true
-      locations: classpath:db/
+    locations:
+      - classpath:db/migration
 datasources:
   default:
     url: jdbc:mysql://localhost:3306/db
@@ -22,8 +22,6 @@ jpa:
       packages: 'com.andrecastrosousa.model'
     properties:
       hibernate:
-        bytecode:
-          provider: none
         hbm2ddl:
-          auto: validate
+          auto: none
         show_sql: true

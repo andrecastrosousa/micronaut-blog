@@ -3,9 +3,11 @@ package com.andrecastrosousa.service
 import com.andrecastrosousa.exception.NoAuthorFoundException
 import com.andrecastrosousa.model.Author
 import com.andrecastrosousa.repository.AuthorRepository
+import jakarta.inject.Singleton
 import java.util.Optional
 
-class AuthorServiceImpl (private val authorRepository: AuthorRepository) : AuthorService {
+@Singleton
+open class AuthorServiceImpl (private val authorRepository: AuthorRepository) : AuthorService {
     override fun listAll() : List<Author> {
         return authorRepository.findAll().toList();
     }

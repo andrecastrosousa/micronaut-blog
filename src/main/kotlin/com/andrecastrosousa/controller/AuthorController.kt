@@ -27,12 +27,12 @@ class AuthorController(private val authorService: AuthorService) {
     }
 
     @Post
-    fun create(@Body @Valid author: Author) : Author {
+    fun create(@Body author: Author) : Author {
         return authorService.create(author)
     }
 
     @Put("/{id}")
-    fun update(id: Long, @Body @Valid author: Author): Author {
+    fun update(id: Long, @Body author: Author): Author {
         return authorService.update(id, author)
     }
 
