@@ -22,7 +22,7 @@ class AuthorRepositoryUnitTest {
             .orElse(null)
 
         assertEquals(
-            "SELECT author_ FROM com.andrecastrosousa.model.Author AS author_ WHERE (author_.firstname = :p1)",
+            "SELECT author_.`id`,author_.`login`,author_.`firstname`,author_.`lastname` FROM `author` author_ WHERE (author_.`firstname` = ?)",
             query
         )
     }

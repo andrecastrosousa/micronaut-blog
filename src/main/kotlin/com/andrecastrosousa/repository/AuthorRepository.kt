@@ -1,13 +1,14 @@
 package com.andrecastrosousa.repository
 
 import com.andrecastrosousa.model.Author
-import io.micronaut.data.annotation.Repository
 import io.micronaut.data.exceptions.DataAccessException
+import io.micronaut.data.jdbc.annotation.JdbcRepository
+import io.micronaut.data.model.query.builder.sql.Dialect
 import io.micronaut.data.repository.CrudRepository
 import jakarta.transaction.Transactional
 import jakarta.validation.constraints.NotBlank
 
-@Repository
+@JdbcRepository(dialect = Dialect.MYSQL)
 interface AuthorRepository : CrudRepository<Author, Long> {
     fun save(@NotBlank author: Author) : Author
 
